@@ -1,3 +1,4 @@
+<img width="474" height="316" alt="logo-vim" src="https://github.com/user-attachments/assets/a385b4b8-9656-42c0-b346-fb7e56d65a07" />
 ## Com utilitzar vim (nivell bàsic)
 
 *Nota*: La tecla **ESC** és la que permet canviar els modes de funcionament a l'editor de text vim/vi. Quan aparegui escrita la paraula ESC significa que cal prèmer la tecla ESC del teclat i tot seguit prémer les tecles que segueixen.
@@ -37,7 +38,7 @@ Tot seguit anem a veure algunes de les combinacions més utilitzades al vi/vim. 
 * **:q!**: sortir sense desar els possibles canvis
 * **:%s/eth1/br1/g**: (cerca a tot el document eth1 i ho substitueix per br1)
 * **:%s/eth1/br1/gc**: (demana confirmació per cada aparició)
-
+___________
 ### Usos més avançats
 1. Amb Vim podem crear diferents pantalles dintre de l'editor de text per obrir diferents fitxers, realitzar comparacions, etc. Per aconseguir-ho utilitzarem les següents combinacions de tecles:
 
@@ -64,10 +65,11 @@ Ctrl w R
 
 **Tancar split**
 
+
 Ctrl w q  
 Ctrl w c  
 
-
+___________
 2. Per modificar diferents línies al mateix temps (per exemple per afegir un nombre d'espais al principi de la línia):  
 Activar mode visual amb Ctrl v    
 Prémer 3j  
@@ -75,5 +77,6 @@ Prémer I (lletra i majúscula)
 *Text a afegir* (text que volem escriure, per exemple un espai en blanc, que només surt a la primera línia, fins que es prem ESC)  
 Prem ESC
 
-3. També es pot desar un document que s'ha de modificar com a sudoer però ens hem oblidat de posar sudo abans d'obrir vi. Es pot solventar així:
+___________
+3. També es pot desar un document que s'ha de modificar com a sudoer però ens hem oblidat de posar sudo abans d'obrir vi. Es pot solventar així:  
 **:w !sudo tee %**
