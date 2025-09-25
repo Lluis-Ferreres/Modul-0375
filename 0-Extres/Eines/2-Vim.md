@@ -1,4 +1,5 @@
 <img width="474" height="316" alt="logo-vim" src="https://github.com/user-attachments/assets/a385b4b8-9656-42c0-b346-fb7e56d65a07" />
+
 ## Com utilitzar vim (nivell bàsic)
 
 *Nota*: La tecla **ESC** és la que permet canviar els modes de funcionament a l'editor de text vim/vi. Quan aparegui escrita la paraula ESC significa que cal prèmer la tecla ESC del teclat i tot seguit prémer les tecles que segueixen.
@@ -6,6 +7,7 @@
 ### 1. Crear documents
 
 a. Opció 1: des de la terminal escriure directament `vi nom-fitxer`. *Si no es desa el document no es generarà: ESC :w ruta/nom-fitxer*
+
 b. Opció 2: des del mateix vi --> ESC :w *ruta/nom-fitxer*
    
 ### 2. Modes de funcionament
@@ -23,15 +25,22 @@ Tot seguit anem a veure algunes de les combinacions més utilitzades al vi/vim. 
 * **ESC**: permet canviar el mode de funcionament del vi
 * **a**: permet introduir text al fitxer
 * **i**: a diferència de la tecla a, en comptes d'afegir després del cursor afegeix el text en la mateixa posició del cursor. No hi ha diferència si la línia és buida o el cursor es troba al final de la línia
+* **o**: inserir línies després de la línia on es troba el cursor
+* **O**: inserir línies abans de la línia on es troba el cursor
 * **dd**: esborra la línia on es troba el cursor. Si afegim un nombre al davant s'esborraran tantes línies com indiqui aquest, i ho podem fer a diferents ordres.
+* **u**: desfer els canvis (undo) per si ens hem equivocat
+* **Ctrl r**: tornar a fer els canvis esborrats amb u, és a dir, tornar a la versió més actual
 * **1G**: porta al principi del document
 * **G**: porta al final del document
+* **nombre G**: et porta a aquella línia (exemple: 45G et porta a la línia 45 del document)
+* **:set number**: mostra una numeració per ajudar a localitzar parts del text amb més facilitat i seguretat, però no modifica el contingut del document.
+* **:set nonumber**: desactiva la numeració de línies
 * **$**: situa el cursor al final de la línia
 * **0**: situa el cursor al principi de la línia
 * **yy**: copia la línia on es troba el cursor al porta-retalls
 * **p**: enganxa el contingut del porta-retalls a la línia de sota d'on es troba el cursor
 * **P**: amb la P majúscula el contingut s'enganxa a la línia superior d'on es troba el cursor
-* **/cadena**: permet realitzar la cerca d'un text (en aquest cas seria la paraula *cadena*). Si es necessita repetir la cerca, cal prèmer la tecla **n** per anar cap avall o **N** per cercar cap a dalt
+* **/cadena**: permet realitzar la cerca d'un text (en aquest cas seria la paraula *cadena*). Si es necessita repetir la cerca, cal prémer la tecla **n** per anar cap avall o **N** per cercar cap a dalt
 * **:w**: permet desar el document si ja té nom, o crear un document si s'especifica la ruta i el nom
 * **:q**: surt del vi
 * **:wq**: sortir desant els canvis realitzats
@@ -44,39 +53,37 @@ ___________
 
 **Divisió vertical**
 
-Ctrl w v  
-:vs  
-Ctrl w l  
-Ctrl w h  
-Ctrl w j  
-Ctrl w k  
+**Ctrl w v**: genera una divisió vertical per obrir un altre document o veure una altra part del mateix on es treballa  
+**:vs**: fa el mateix que ctrl w v  
+**Ctrl w l**: mou el cursor a la finestra de la dreta  
+**Ctrl w h**: mou el cursor a la finestra de l'esquerra  
 
 **Divisió horitzontal**
 
-Ctrl w s  
-:sp  
-Ctrl w j  
-Ctrl w k  
+**Ctrl w s**: genera una divisió horitzontal per obrir un altre document o veure una altra part del mateix on es treballa  
+**:sp**: fa el mateix que Ctrl w s  
+**Ctrl w j**: mou el cursor a la finestra de sota  
+**Ctrl w k**: mou el cursor a la finestra de dalt
 
 **Canviar la posició de les finestres**
 
-Ctrl w r  
-Ctrl w R  
+**Ctrl w r**  
+**Ctrl w R**
 
 **Tancar split**
 
-
-Ctrl w q  
-Ctrl w c  
+**Ctrl w q**: tanca una finestra  
+**Ctrl w c**: tanca una finestra 
 
 ___________
 2. Per modificar diferents línies al mateix temps (per exemple per afegir un nombre d'espais al principi de la línia):  
 Activar mode visual amb Ctrl v    
-Prémer 3j  
+Prémer tecles de cursor per seleccionar el que es vol modificar  
 Prémer I (lletra i majúscula)  
 *Text a afegir* (text que volem escriure, per exemple un espai en blanc, que només surt a la primera línia, fins que es prem ESC)  
 Prem ESC
 
+Veurem com s'apliquen els canvis.
 ___________
 3. També es pot desar un document que s'ha de modificar com a sudoer però ens hem oblidat de posar sudo abans d'obrir vi. Es pot solventar així:  
 **:w !sudo tee %**
