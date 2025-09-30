@@ -14,7 +14,7 @@ OpenSuSE:
 `sudo zypper in screen -y`
 
 Rocky Linux:  
-`sudo dnf install screen`
+`sudo dnf install epel-release screen`
 
 Arch:  
 `sudo pacman -Syu screen`
