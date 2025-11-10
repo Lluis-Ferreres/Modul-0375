@@ -24,3 +24,5 @@ Tota la configuració del DNS es pot configurar mitjançant la correcta configur
 * **domini**: el domini es forma amb el nom identificador més un TLD. Amb aquesta informació s'intenta aconseguir una combinació que resulti senzilla de recordar per part dels usuaris, el que també forma part de les activitats de negoci de les empreses quan volen exposar els seus productes i volen donar-se a conèixer. Exemples: *google.cat, amazon.es, incibe.es*, etc.
 
 * **subdomini**: indica dintre del domini (o més bé hauria d'indicar) dintre del domini el tipus de finalitat del lloc on ens anem a connectar. Exemples: *www.google.com (web per accedir al motor de cerca de l'empresa Google), www.incibe.es (web per accedir a la pàgina sobre informació pels ciutadans sobre ciberseguretat a Espanya), ftp.rediris.com (accés per intercanvi de fitxers amb la xarxa acadèmica o d'investigació rediris)*, etc.
+
+**Zona**: es tracta d'un fitxer on es defineixen les característiques del domini així com també la relació entre IP i nom dels equips dintre del domini.
