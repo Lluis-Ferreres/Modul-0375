@@ -1,12 +1,13 @@
 ## Jerarquia del sistema DNS
-El sistema de noms segueix el que s'anomena una estructura jeràrquica en forma d'arbre invertit. Això vol dir que a la part superior trobem el nivell més baix, el 0 on comença tot.  
-Seguidament trobem el TLD al nivell 1.  
-Al nivell 2 es defineix el domini.  
-Finalment a partir del nivell 3 es defineixen els subdominis.
+El DNS és una base de dades distribuïda a diferents servidors.  
+El sistema de noms segueix el que s'anomena una estructura jeràrquica en forma d'arbre invertit. Això vol dir que a la part superior trobem el nivell més baix, el **0** on comença tot. Aquest nivell és l'**arrel** i només hi ha 13 servidors arrel (replicats a tot el món) per temes tecnològics. Amb IPv4 no es poen construir paquets que permetin emmagatzemar IPs per més dominis. En canvi amb IPv6 es podrà superar aquesta limitació tècnica i segurament apareixeran més servidors arrel.  
+Seguidament trobem el **TLD al nivell 1**.  
+Al **nivell 2** es defineix el **domini**.  
+Finalment **a partir del nivell 3** es defineixen els **subdominis**.
 
-De moment no trobarem més de 5 nivells per temes de rendiment.
+De moment habitualment no trobarem més de 5 nivells per temes de rendiment. El màxim que permet la ICANN però és de 127 nivells, comptant subdominis i arrel.
 
-Quan tenim definit un domini, utilitzarem el terme FQDN (**F**ully **Q**ualified **D**omain **N**ame) per a referir-nos al mateix. D'aquesta forma queda identificat a la xarxa i podrem accedir si està ben definit a servidor i tenim connectivitat.
+Quan tenim definit un domini, utilitzarem el terme FQDN (**F**ully **Q**ualified **D**omain **N**ame) per a referir-nos al mateix. D'aquesta forma queda identificat a la xarxa i podrem accedir si està ben definit al servidor i tenim connectivitat.
 
 ## Tipus de servidors
 * **Servidor primari**: conté les zones (arxius de definició de dominis) a dintre seu
@@ -17,4 +18,11 @@ Quan tenim definit un domini, utilitzarem el terme FQDN (**F**ully **Q**ualified
 * Temps de reintents (**retry**): temps que ha de transcórrer des de que es detecta que el servidor primari està "caigut" fins que es demana la informació a un altre servidor
 * Temps de caducitat (**expire**): temps fins que s'esborra la informació de zona del servidor secundari en cas que no hi hagi connectivitat amb el primari o qui li pugui facilitar la informació de zona 
 
+## Registre de recursos (RR)
+Dintre de les zones es defineixen els recursos (equips accessibles per IP). Per deixar clar quin tipus d'informació s'està utilitzant, es defineixen diferents tipus de registres.
+
+
 *Documentació en desenvolupament*
+## Més informació
+[Limitació de servidors arrel](https://www.lifewire.com/dns-root-name-servers-3971336 "Ampliació de coneixements")  
+[Nombre màxim de nivells de domini](https://www.byronvargas.com/web/cuantos-niveles-puede-tener-un-nombre-de-dominio-2/?expand_article=1 "Ampliació de coneixements")
