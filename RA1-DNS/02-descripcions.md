@@ -21,8 +21,35 @@ Quan tenim definit un domini, utilitzarem el terme FQDN (**F**ully **Q**ualified
 ## Registre de recursos (RR)
 Dintre de les zones es defineixen els recursos (equips accessibles per IP). Per deixar clar quin tipus d'informació s'està utilitzant, es defineixen diferents tipus de registres.
 
+**Estructura dels recursos**
 
-*Documentació en desenvolupament*
+*FQDN TTL Tipus Classe RDATA*
+
+* **FQDN** és el nom del domini (finalitza amb un . per indicar que està complet i no li falta cap paraula)
+* **TTL** és un temps de "vida" mínim durant el qual la informació es pot mantenir en memòria cau
+* **Tipus de registres**
+  - *SOA* (Start Of Authority): on es defineix el domini
+  - *NS* (Name Server): identificació del servidor de noms
+  - *A* (Address): permet assignar l'adreça IP al domini
+  - *CNAME* (Canonical Name): és un àlies, una altra forma d'identificar un recurs. Ajuda a entendre millor el contingut del fitxer de zona al no repetir IPs, cosa que pot fer pensar que es tracta d'un equip diferent i obliga a fixar-se més amb les IPs definides
+  - *MX* (Mail eXchanger): indica el servidor de correu associat al domini definit
+  - *PTR* (PoinTeR): permet definir resolució inversa, és dit, a partir d'una IP obtenir un domini. No sol utilitzar-se per no donar massa informació a possibles atacants
+  - *HINFO*: informació sobre el maquinari. No sol utilitzar-se per no donar massa informació a possibles atacants
+  - *SRV* (SeRVice): servei. Sol associar-se amb hosts i ports, per identificar el servei que es defineix (per exemple VoIP)
+  - *TXT*: emmagatzema qualsevol tipus d'informació que es vol oferir públicament quan es consulti informació sobre un domini
+  - *AAAA*: s'utilitza per definir adreces IPv6
+* **Classe**: conté el valor IN i significa que s'utilitza per Internet
+* **RDATA**: indica les dades que acompanyen cada tipus de recurs
+   - A: una adreça IPv4
+   - AAAA: una adreça IPv6
+   - CNAME: un nom de domini alternatiu al principal
+   - MX: indica la prioritat per accedir a un servidor (en 16 bits) acompanyat del nom de l'equip
+   - NS: nom de l'equip que serà el servidor de noms
+   - PTR: el nom de domini (in-arpa-addr)
+   - SOA: es defineix amb el nom del domini, nom del servidor i adreça de correu d'un administrador (tot i que la sintaxi del correu és diferent al canviar @ per un .). Entre parèntesi trobarem: un número de sèrie, temps d'actualització, temps de reintent, temps de caducitat i temps mínim de vida (validesa de la informació emmagatzemada en memòria cau)
+
 ## Més informació
-[Limitació de servidors arrel](https://www.lifewire.com/dns-root-name-servers-3971336 "Ampliació de coneixements")  
-[Nombre màxim de nivells de domini](https://www.byronvargas.com/web/cuantos-niveles-puede-tener-un-nombre-de-dominio-2/?expand_article=1 "Ampliació de coneixements")
+[Teoria sobre DNS](https://www.profesordeinformatica.com/servicios/dns "Ampliació de coneixements")  
+[Limitació de servidors arrel](https://www.lifewire.com/dns-root-name-servers-3971336 "Ampliació de coneixements")   
+[Nombre màxim de nivells de domini](https://www.byronvargas.com/web/cuantos-niveles-puede-tener-un-nombre-de-dominio-2/?expand_article=1 "Ampliació de coneixements")  
+[Sobre els registres SRV](https://www.cloudflare.com/learning/dns/dns-records/dns-srv-record/ "Ampliació de coneixements")
