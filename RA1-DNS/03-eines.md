@@ -2,6 +2,8 @@
 * whois: ens permetrà conéixer informació sobre dominis registrats. Algunes dades no es publiquen per temes de seguretat i evitar així possibles atacs.
 * nslookup: eina per comprovar el correcte funcionament del servidor DNS
 * dig: una altra eina per comprovar el correcte funcionament del servidor DNS
+* webmin: eina per administrar via web un servidor. Funciona força bé amb el servei BIND9
+* bind9: servei DNS. Cal instal·lar els paquets bind i bind-utils per tenir el servei i les eines de gestió i comprovació. El servei s'anomena named i es pot consultar el funcionament amb systemctl status named.
 
 ## Exemples d'ús
 * Comprovar la informació sobre un domini públic:  
