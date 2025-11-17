@@ -49,6 +49,7 @@ Dintre de les zones es defineixen els recursos (equips accessibles per IP). Per 
    - SOA: es defineix amb el nom del domini, nom del servidor i adreça de correu d'un administrador (tot i que la sintaxi del correu és diferent al canviar @ per un .). Entre parèntesi trobarem: un número de sèrie, temps d'actualització, temps de reintent, temps de caducitat i temps mínim de vida (validesa de la informació emmagatzemada en memòria cau)
 
 ## Més informació
+[Inicis DNS: /etc/hosts](https://thelinuxcode.com/etc-hosts-file-complete-guide-for-linux/ "Fitxer hosts")  
 [Teoria sobre DNS](https://www.profesordeinformatica.com/servicios/dns "Ampliació de coneixements")  
 [Limitació de servidors arrel](https://www.lifewire.com/dns-root-name-servers-3971336 "Ampliació de coneixements")   
 [Nombre màxim de nivells de domini](https://www.byronvargas.com/web/cuantos-niveles-puede-tener-un-nombre-de-dominio-2/?expand_article=1 "Ampliació de coneixements")  
