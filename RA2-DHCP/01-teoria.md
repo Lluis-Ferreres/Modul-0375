@@ -32,11 +32,11 @@ Per comprendre el funcionament del protocol DHCP, hem de saber com assignar adre
 * Nom del servidor WINS
 
 **Funcionament**
-1. Un client envia una petició broadcast a la xarxa per localitzar un servidor DHCP. Aquest és un missatge DHCPDISCOVER
-2. Si hi ha servidors a la xarxa, li enviaran com a resposta un missatge DHCPOFFER al client per a que seleccioni una IP disponible
-3. El client en rebre la resposta, envia un missatge d'acceptació també per difusió a tots els equips de la xarxa indicant que ha acceptat una de les IPs disponibles
-4. El servidor que li ofereix l'adreça respon que pot utilitzar aquesta adreça mitjançant un missatge DHCPACK, indicant també durant quan de temps pot utilitzar aquesta adreça
-5. Quan el client s'ha de desconnectar, envia un darrer missatge DHCPRELEASE per alliberar la IP. Aquest missatge es produeix pel final del temps de concessió o bé per apagada de l'equip
+1. Un client envia una petició broadcast a la xarxa per localitzar un servidor DHCP. Aquest és un missatge **DHCPDISCOVER**
+2. Si hi ha servidors a la xarxa, li enviaran com a resposta un missatge **DHCPOFFER** al client per a que seleccioni una IP disponible
+3. El client en rebre la resposta, envia un missatge **DHCPREQUEST** d'acceptació també per difusió a tots els equips de la xarxa indicant que ha acceptat una de les IPs disponibles
+4. El servidor que li ofereix l'adreça respon que pot utilitzar aquesta adreça mitjançant un missatge **DHCPACK**, indicant també durant quan de temps pot utilitzar aquesta adreça
+5. Quan el client s'ha de desconnectar, envia un darrer missatge **DHCPRELEASE** per alliberar la IP. Aquest missatge es produeix pel final del temps de concessió o bé per apagada de l'equip
 
 ## Avantatges d'utilitzar DHCP
 * Evita haver d'anar dispositiu per dispositiu configurant la xarxa
@@ -52,8 +52,12 @@ No tot són avantatges, però aquests superen als inconvenients en moltes situac
 * Cal estudiar la càrrega de treball dels servidors DHCP per donar un bon servei a tots els equips que depenen d'ells
 * DHCP és un servei crític i s'ha de protegir d'atacs per evitar que els equips de l'empresa es quedin sense connexió a la xarxa, amb les pèrdues econòmiques que pot comportar-
 
+**Adreces APIPA**  
+El protocol APIPA (Automatic Private Internet Protocol Addressing) assigna una IP de forma automàtica quan no es pot comunicar o aconseguir una IP des d'un servidor DHCP.
 
-*Apunts en desenvolupament*
+Les adreces estan compreses entre 169.254.0.1 i 169.254.255.254 amb màscara de classe B 255.255.0.0, el que permet generar una xarxa local temporal. Cada 5 minuts el client intentarà aconseguir una IP de la xarxa.
+
+Amb Windows es fa de forma automàtica, amb LInux s'ha de configurar una paquet, avahi-autoipd.
 
 ## Ampliació de continguts
 Agraïments a les següents webs:  
