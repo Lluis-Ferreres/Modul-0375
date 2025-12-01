@@ -57,7 +57,7 @@ El protocol APIPA (Automatic Private Internet Protocol Addressing) assigna una I
 
 Les adreces estan compreses entre 169.254.0.1 i 169.254.255.254 amb màscara de classe B 255.255.0.0, el que permet generar una xarxa local temporal. Cada 5 minuts el client intentarà aconseguir una IP de la xarxa.
 
-Amb Windows es fa de forma automàtica, amb LInux s'ha de configurar una paquet, avahi-autoipd.
+Amb Windows es fa de forma automàtica, amb Linux s'ha de configurar un paquet anomenat avahi-autoipd.
 
 ## Ampliació de continguts
 Agraïments a les següents webs:  
