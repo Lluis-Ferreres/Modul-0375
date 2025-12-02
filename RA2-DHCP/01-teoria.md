@@ -13,7 +13,7 @@ Per comprendre el funcionament del protocol DHCP, hem de saber com assignar adre
 **Mètodes d'assignació d'adreces IP**
 1. *Assignació manual o estàtica*: s'assigna una IP que no variarà amb el temps. Això s'aconsegueix enllaçant l'adreça MAC de la interfície de xarxa amb aquesta IP.
 2. *Assignació automàtica*: s'assigna una IP de forma permanent, però sense la necessitat d'associar-la amb l'adreça MAC. Es pot aconseguir quan es disposa de gran quantitat d'adreces disponibles. Exemple: quan el router de casa assigna una IP als dispositius locals que s'hi connecten
-3. *Assignació dinàmica*: s'assigna una IP de forma temporal, en cas de necessitat es sol·licita una renovació i es rebrà una nova IP. Exemple: quan el route de casa rep una IP del proveïdor de serveis d'Internet.
+3. *Assignació dinàmica*: s'assigna una IP de forma temporal, en cas de necessitat es sol·licita una renovació i es rebrà una nova IP. Exemple: quan el router de casa rep una IP del proveïdor de serveis d'Internet.
 
 **Paràmetres que es poden assignar**
 * Adreça IP
