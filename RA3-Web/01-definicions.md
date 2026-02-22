@@ -43,4 +43,5 @@ URL: Esquema://userinfo@domini:Port/cami?Query
 ## Més informació
 Agraïments a les següents webs:  
 [Teoria sobre servidors Web](https://www.profesordeinformatica.com/servicios/http/introduccion "Ampliació de coneixements")  
-[Descripció de MIME](https://en.wikipedia.org/wiki/MIME "Wikipedia")
+[Descripció de MIME](https://en.wikipedia.org/wiki/MIME "Wikipedia")  
+[Diferències URN, URL i URI](https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/uniform-resource-name/ "Explicació a IONOS")
